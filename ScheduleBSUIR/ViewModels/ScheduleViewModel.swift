@@ -9,6 +9,27 @@ import Foundation
 
 class ScheduleViewModel: ObservableObject {
     @Published var date = Date()
+    @Published var schedule: Lesson?
     
-    @Published var group = 924404
+    init() {
+        DispatchQueue.main.async {
+            self.makeScheduleFor(group: 924403)
+        }
+    }
+    
+    func makeScheduleFor(group: Int) {
+        let url = URL(string: "https://iis.bsuir.by/api/v1/schedule?studentGroup=\(group)")!
+        let request = URLRequest(url: url)
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            switch response {
+            case .none:
+                print("Данных нет")
+            case .some(_):
+                print("Данные пришли")
+                let result = try? JSONDecoder().decode(Lesson.self, from: data!)
+                self.schedule = result
+            }
+        }
+        task.resume()
+    }
 }

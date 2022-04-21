@@ -1,5 +1,5 @@
 //
-//  Lesson.swift
+//  LessonView.swift
 //  ScheduleBSUIR
 //
 //  Created by Artem Kutasevich on 27.03.22.
@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct Lesson: View {
-    var lessonType: LessonType
-    var lessonFor: LessonFor
+struct LessonView: View {
+    var lessonType: String
+    var lessonFor: String
     var startLessonTime: String
     var endLessonType: String
     var subject: String
@@ -26,7 +26,7 @@ struct Lesson: View {
                 Text("")
                     .subTitleStyle(text: endLessonType)
                 Text("")
-                    .subBodyStyle(text: lessonFor.rawValue)
+                    .subBodyStyle(text: lessonFor)
             }
             
             VStack(alignment: .leading, spacing: 0) {
@@ -34,9 +34,9 @@ struct Lesson: View {
                     .titleStyle(text: subject)
                 HStack {
                     Circle()
-                        .circleStyle(color: Color(lessonType.rawValue))
+                        .circleStyle(color: Color(lessonType))
                     Text("")
-                        .subBodyStyle(text: lessonType.rawValue)
+                        .subBodyStyle(text: lessonType)
                 }
                 Text("")
                     .subBodyStyle(text: cabinet)
@@ -54,12 +54,12 @@ struct Lesson: View {
             Spacer()
         }
         .padding()
-        .graffitiStyle(color: Color(lessonType.rawValue))
+        .graffitiStyle(color: Color(lessonType))
     }
 }
 
 struct Lesson_Previews: PreviewProvider {
     static var previews: some View {
-        Lesson(lessonType: .practice, lessonFor: .firstSubgroup, startLessonTime: "9:00", endLessonType: "10:20", subject: "TM", cabinet: "404-5k", firstName: "Кукин", lastName: "Дмитрий", middleName: "Петрович")
+        LessonView(lessonType: "ЛР", lessonFor: "", startLessonTime: "9:00", endLessonType: "10:20", subject: "TM", cabinet: "404-5k", firstName: "Кукин", lastName: "Дмитрий", middleName: "Петрович")
     }
 }

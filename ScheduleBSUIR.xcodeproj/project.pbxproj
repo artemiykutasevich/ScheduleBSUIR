@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B84B97F727F745F0002720CE /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84B97F627F745F0002720CE /* Lesson.swift */; };
+		B84B97FF27F873CB002720CE /* ScheduleBSUIRTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84B97FE27F873CB002720CE /* ScheduleBSUIRTests.swift */; };
 		B85F5E3727F07009007C7B3A /* ScheduleBSUIRApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85F5E3627F07009007C7B3A /* ScheduleBSUIRApp.swift */; };
 		B85F5E3927F07009007C7B3A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85F5E3827F07009007C7B3A /* ContentView.swift */; };
 		B85F5E3B27F0700A007C7B3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B85F5E3A27F0700A007C7B3A /* Assets.xcassets */; };
@@ -15,24 +17,35 @@
 		B85F5E4B27F074CA007C7B3A /* TasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85F5E4A27F074CA007C7B3A /* TasksView.swift */; };
 		B85F5E4D27F074DC007C7B3A /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85F5E4C27F074DC007C7B3A /* ScheduleView.swift */; };
 		B85F5E4F27F074ED007C7B3A /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85F5E4E27F074ED007C7B3A /* AccountView.swift */; };
-		B85F5E5127F076C5007C7B3A /* LessonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85F5E5027F076C5007C7B3A /* LessonType.swift */; };
 		B85F5E5327F0772D007C7B3A /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85F5E5227F0772D007C7B3A /* Tab.swift */; };
 		B85F5E5527F0777D007C7B3A /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85F5E5427F0777D007C7B3A /* TabItem.swift */; };
 		B85F5E5727F07D58007C7B3A /* PreferenceKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85F5E5627F07D58007C7B3A /* PreferenceKeys.swift */; };
 		B85F5E5A27F0827B007C7B3A /* TasksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85F5E5927F0827B007C7B3A /* TasksViewModel.swift */; };
 		B85F5E5C27F082BA007C7B3A /* ScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85F5E5B27F082BA007C7B3A /* ScheduleViewModel.swift */; };
 		B85F5E5E27F082E4007C7B3A /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85F5E5D27F082E4007C7B3A /* AccountViewModel.swift */; };
-		B85F5E6027F08D3A007C7B3A /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85F5E5F27F08D3A007C7B3A /* Lesson.swift */; };
-		B8E7430527F1BA7C0029A152 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E7430427F1BA7C0029A152 /* Task.swift */; };
+		B85F5E6027F08D3A007C7B3A /* LessonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85F5E5F27F08D3A007C7B3A /* LessonView.swift */; };
+		B8E7430527F1BA7C0029A152 /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E7430427F1BA7C0029A152 /* TaskView.swift */; };
 		B8E7430727F1BAC50029A152 /* TaskType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E7430627F1BAC50029A152 /* TaskType.swift */; };
 		B8E7430927F1BF9A0029A152 /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E7430827F1BF990029A152 /* ViewModifiers.swift */; };
 		B8E7430B27F1C46F0029A152 /* TextModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E7430A27F1C46F0029A152 /* TextModifiers.swift */; };
 		B8E7430D27F1F4650029A152 /* CircleModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E7430C27F1F4650029A152 /* CircleModifiers.swift */; };
-		B8E7430F27F239680029A152 /* StudentGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E7430E27F239680029A152 /* StudentGroup.swift */; };
-		B8E7431127F23B1C0029A152 /* LessonFor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E7431027F23B1C0029A152 /* LessonFor.swift */; };
+		B8E7430F27F239680029A152 /* MyStudentGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E7430E27F239680029A152 /* MyStudentGroup.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		B84B980027F873CB002720CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B85F5E2B27F07009007C7B3A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B85F5E3227F07009007C7B3A;
+			remoteInfo = ScheduleBSUIR;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		B84B97F627F745F0002720CE /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
+		B84B97FC27F873CB002720CE /* ScheduleBSUIRTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScheduleBSUIRTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B84B97FE27F873CB002720CE /* ScheduleBSUIRTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleBSUIRTests.swift; sourceTree = "<group>"; };
 		B85F5E3327F07009007C7B3A /* ScheduleBSUIR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScheduleBSUIR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B85F5E3627F07009007C7B3A /* ScheduleBSUIRApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleBSUIRApp.swift; sourceTree = "<group>"; };
 		B85F5E3827F07009007C7B3A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -42,24 +55,29 @@
 		B85F5E4A27F074CA007C7B3A /* TasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksView.swift; sourceTree = "<group>"; };
 		B85F5E4C27F074DC007C7B3A /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
 		B85F5E4E27F074ED007C7B3A /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
-		B85F5E5027F076C5007C7B3A /* LessonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonType.swift; sourceTree = "<group>"; };
 		B85F5E5227F0772D007C7B3A /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 		B85F5E5427F0777D007C7B3A /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
 		B85F5E5627F07D58007C7B3A /* PreferenceKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceKeys.swift; sourceTree = "<group>"; };
 		B85F5E5927F0827B007C7B3A /* TasksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewModel.swift; sourceTree = "<group>"; };
 		B85F5E5B27F082BA007C7B3A /* ScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewModel.swift; sourceTree = "<group>"; };
 		B85F5E5D27F082E4007C7B3A /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
-		B85F5E5F27F08D3A007C7B3A /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
-		B8E7430427F1BA7C0029A152 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		B85F5E5F27F08D3A007C7B3A /* LessonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonView.swift; sourceTree = "<group>"; };
+		B8E7430427F1BA7C0029A152 /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
 		B8E7430627F1BAC50029A152 /* TaskType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskType.swift; sourceTree = "<group>"; };
 		B8E7430827F1BF990029A152 /* ViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.swift; sourceTree = "<group>"; };
 		B8E7430A27F1C46F0029A152 /* TextModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextModifiers.swift; sourceTree = "<group>"; };
 		B8E7430C27F1F4650029A152 /* CircleModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleModifiers.swift; sourceTree = "<group>"; };
-		B8E7430E27F239680029A152 /* StudentGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentGroup.swift; sourceTree = "<group>"; };
-		B8E7431027F23B1C0029A152 /* LessonFor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonFor.swift; sourceTree = "<group>"; };
+		B8E7430E27F239680029A152 /* MyStudentGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStudentGroup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B84B97F927F873CB002720CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B85F5E3027F07009007C7B3A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -70,10 +88,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B84B97FD27F873CB002720CE /* ScheduleBSUIRTests */ = {
+			isa = PBXGroup;
+			children = (
+				B84B97FE27F873CB002720CE /* ScheduleBSUIRTests.swift */,
+			);
+			path = ScheduleBSUIRTests;
+			sourceTree = "<group>";
+		};
 		B85F5E2A27F07009007C7B3A = {
 			isa = PBXGroup;
 			children = (
 				B85F5E3527F07009007C7B3A /* ScheduleBSUIR */,
+				B84B97FD27F873CB002720CE /* ScheduleBSUIRTests */,
 				B85F5E3427F07009007C7B3A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -82,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				B85F5E3327F07009007C7B3A /* ScheduleBSUIR.app */,
+				B84B97FC27F873CB002720CE /* ScheduleBSUIRTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -132,8 +160,8 @@
 		B85F5E4627F07356007C7B3A /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				B85F5E5F27F08D3A007C7B3A /* Lesson.swift */,
-				B8E7430427F1BA7C0029A152 /* Task.swift */,
+				B85F5E5F27F08D3A007C7B3A /* LessonView.swift */,
+				B8E7430427F1BA7C0029A152 /* TaskView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -142,12 +170,11 @@
 			isa = PBXGroup;
 			children = (
 				B8E7430627F1BAC50029A152 /* TaskType.swift */,
-				B85F5E5027F076C5007C7B3A /* LessonType.swift */,
-				B8E7431027F23B1C0029A152 /* LessonFor.swift */,
+				B84B97F627F745F0002720CE /* Lesson.swift */,
 				B85F5E5227F0772D007C7B3A /* Tab.swift */,
 				B85F5E5427F0777D007C7B3A /* TabItem.swift */,
 				B85F5E5627F07D58007C7B3A /* PreferenceKeys.swift */,
-				B8E7430E27F239680029A152 /* StudentGroup.swift */,
+				B8E7430E27F239680029A152 /* MyStudentGroup.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -175,6 +202,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		B84B97FB27F873CB002720CE /* ScheduleBSUIRTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B84B980227F873CB002720CE /* Build configuration list for PBXNativeTarget "ScheduleBSUIRTests" */;
+			buildPhases = (
+				B84B97F827F873CB002720CE /* Sources */,
+				B84B97F927F873CB002720CE /* Frameworks */,
+				B84B97FA27F873CB002720CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B84B980127F873CB002720CE /* PBXTargetDependency */,
+			);
+			name = ScheduleBSUIRTests;
+			productName = ScheduleBSUIRTests;
+			productReference = B84B97FC27F873CB002720CE /* ScheduleBSUIRTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		B85F5E3227F07009007C7B3A /* ScheduleBSUIR */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B85F5E4127F0700A007C7B3A /* Build configuration list for PBXNativeTarget "ScheduleBSUIR" */;
@@ -202,6 +247,10 @@
 				LastSwiftUpdateCheck = 1330;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
+					B84B97FB27F873CB002720CE = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = B85F5E3227F07009007C7B3A;
+					};
 					B85F5E3227F07009007C7B3A = {
 						CreatedOnToolsVersion = 13.3;
 					};
@@ -221,11 +270,19 @@
 			projectRoot = "";
 			targets = (
 				B85F5E3227F07009007C7B3A /* ScheduleBSUIR */,
+				B84B97FB27F873CB002720CE /* ScheduleBSUIRTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B84B97FA27F873CB002720CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B85F5E3127F07009007C7B3A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -238,21 +295,27 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B84B97F827F873CB002720CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B84B97FF27F873CB002720CE /* ScheduleBSUIRTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B85F5E2F27F07009007C7B3A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B85F5E5127F076C5007C7B3A /* LessonType.swift in Sources */,
 				B85F5E4F27F074ED007C7B3A /* AccountView.swift in Sources */,
 				B85F5E5727F07D58007C7B3A /* PreferenceKeys.swift in Sources */,
-				B8E7431127F23B1C0029A152 /* LessonFor.swift in Sources */,
-				B8E7430F27F239680029A152 /* StudentGroup.swift in Sources */,
+				B8E7430F27F239680029A152 /* MyStudentGroup.swift in Sources */,
 				B85F5E4D27F074DC007C7B3A /* ScheduleView.swift in Sources */,
 				B85F5E5327F0772D007C7B3A /* Tab.swift in Sources */,
 				B8E7430927F1BF9A0029A152 /* ViewModifiers.swift in Sources */,
-				B85F5E6027F08D3A007C7B3A /* Lesson.swift in Sources */,
+				B85F5E6027F08D3A007C7B3A /* LessonView.swift in Sources */,
 				B85F5E4927F07494007C7B3A /* TabBar.swift in Sources */,
-				B8E7430527F1BA7C0029A152 /* Task.swift in Sources */,
+				B8E7430527F1BA7C0029A152 /* TaskView.swift in Sources */,
 				B85F5E3927F07009007C7B3A /* ContentView.swift in Sources */,
 				B85F5E5C27F082BA007C7B3A /* ScheduleViewModel.swift in Sources */,
 				B85F5E3727F07009007C7B3A /* ScheduleBSUIRApp.swift in Sources */,
@@ -263,12 +326,57 @@
 				B85F5E5E27F082E4007C7B3A /* AccountViewModel.swift in Sources */,
 				B8E7430727F1BAC50029A152 /* TaskType.swift in Sources */,
 				B85F5E5A27F0827B007C7B3A /* TasksViewModel.swift in Sources */,
+				B84B97F727F745F0002720CE /* Lesson.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		B84B980127F873CB002720CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B85F5E3227F07009007C7B3A /* ScheduleBSUIR */;
+			targetProxy = B84B980027F873CB002720CE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		B84B980327F873CB002720CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5998BU97D3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = artemiykutasevich.ScheduleBSUIRTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ScheduleBSUIR.app/ScheduleBSUIR";
+			};
+			name = Debug;
+		};
+		B84B980427F873CB002720CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5998BU97D3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = artemiykutasevich.ScheduleBSUIRTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ScheduleBSUIR.app/ScheduleBSUIR";
+			};
+			name = Release;
+		};
 		B85F5E3F27F0700A007C7B3A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -448,6 +556,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B84B980227F873CB002720CE /* Build configuration list for PBXNativeTarget "ScheduleBSUIRTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B84B980327F873CB002720CE /* Debug */,
+				B84B980427F873CB002720CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B85F5E2E27F07009007C7B3A /* Build configuration list for PBXProject "ScheduleBSUIR" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

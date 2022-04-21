@@ -1,5 +1,5 @@
 //
-//  Task.swift
+//  TaskView.swift
 //  ScheduleBSUIR
 //
 //  Created by Artem Kutasevich on 28.03.22.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Task: View {
+struct TaskView: View {
     var taskType: TaskType
     var title: String
     var date: String
@@ -37,6 +37,6 @@ struct Task: View {
 
 struct Task_Previews: PreviewProvider {
     static var previews: some View {
-        Task(taskType: .custom, title: "Title", date: "19.20.2020", text: "text", width: 150)
+        TaskView(taskType: .custom, title: "Title", date: "19.20.2020", text: "text", width: 150)
     }
 }

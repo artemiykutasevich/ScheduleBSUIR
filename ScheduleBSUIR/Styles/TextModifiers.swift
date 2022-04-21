@@ -12,7 +12,7 @@ struct TitleStyle: ViewModifier {
     
     func body(content: Content) -> some View {
         Text(text)
-            .font(.title)
+            .font(.title2)
             .fontWeight(.bold)
             .foregroundColor(.primary)
     }
@@ -23,7 +23,7 @@ struct SubTitleStyle: ViewModifier {
     
     func body(content: Content) -> some View {
         Text(text)
-            .font(.title2)
+            .font(.title3)
             .fontWeight(.semibold)
             .foregroundColor(.secondary)
     }

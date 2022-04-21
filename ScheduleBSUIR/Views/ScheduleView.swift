@@ -21,13 +21,24 @@ struct ScheduleView: View {
                     .padding(.leading)
                     .padding(.trailing)
                 
-                Lesson(lessonType: .lecture, lessonFor: .firstSubgroup, startLessonTime: "9:00", endLessonType: "10:20", subject: "TM", cabinet: "404-5", firstName: "Кукин", lastName: "Дмитрий", middleName: "Петрович")
+                ForEach(viewModel.schedule?.todaySchedules ?? []) { lesson in
+                    LessonView(
+                        lessonType: lesson.lessonType ?? "",
+                        lessonFor: lesson.numSubgroup?.description ?? "",
+                        startLessonTime: lesson.startLessonTime ?? "",
+                        endLessonType: lesson.endLessonTime ?? "",
+                        subject: lesson.subject ?? "",
+                        cabinet: lesson.auditory?.first ?? "",
+                        firstName: lesson.employee?.first?.lastName ?? "",
+                        lastName: lesson.employee?.first?.firstName ?? "",
+                        middleName: lesson.employee?.first?.middleName ?? "")
+                }
             }
             .safeAreaInset(edge: .bottom) {
                 Color.clear.frame(height: 70)
             }
             .background(Color("Background").ignoresSafeArea())
-            .navigationTitle("Schedule \(viewModel.group.description)")
+            .navigationTitle("Schedule \(viewModel.schedule?.studentGroup?.name ?? "111111")")
         }
     }
 }

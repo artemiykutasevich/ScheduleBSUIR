@@ -16,8 +16,8 @@ struct TasksView: View {
             ScrollView {
                 ForEach(0..<5) { _ in
                     HStack(spacing: 0) {
-                        Task(taskType: .custom, title: "oleg", date: "dkdkkd", text: "ffkfk", width: taskWidth)
-                        Task(taskType: .university, title: "good play", date: "sksks", text: "djdjdj", width: taskWidth)
+                        TaskView(taskType: .custom, title: "oleg", date: "dkdkkd", text: "ffkfk", width: taskWidth)
+                        TaskView(taskType: .university, title: "good play", date: "sksks", text: "djdjdj", width: taskWidth)
                     }
                 }
             }

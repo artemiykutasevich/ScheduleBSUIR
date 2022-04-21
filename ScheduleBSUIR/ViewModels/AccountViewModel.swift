@@ -8,5 +8,5 @@
 import Foundation
 
 class AccountViewModel: ObservableObject {
-    @Published var groups = [StudentGroup]()
+    @Published var groups = [MyStudentGroup]()
 }
