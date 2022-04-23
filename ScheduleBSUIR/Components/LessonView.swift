@@ -25,8 +25,10 @@ struct LessonView: View {
                     .titleStyle(text: startLessonTime)
                 Text("")
                     .subTitleStyle(text: endLessonType)
-                Text("")
-                    .subBodyStyle(text: lessonFor)
+                if lessonFor != "0" {
+                    Text("")
+                        .subBodyStyle(text: "Подгр. \(lessonFor)")
+                }
             }
             
             VStack(alignment: .leading, spacing: 0) {
