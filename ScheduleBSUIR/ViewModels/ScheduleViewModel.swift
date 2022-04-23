@@ -32,4 +32,12 @@ class ScheduleViewModel: ObservableObject {
         }
         task.resume()
     }
+    
+    func getTodaySchedule() -> [ScheduleModel] {
+        return schedule?.todaySchedules ?? []
+    }
+    
+    func getTomorrowSchedule() -> [ScheduleModel] {
+        return schedule?.tomorrowSchedules ?? []
+    }
 }

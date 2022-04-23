@@ -14,7 +14,7 @@ struct Lesson: Codable {
     let todayDate: String?
     let todaySchedules: [ScheduleModel]?
     //    var tomorrowDate: String
-    //    var tomorrowSchedules: [ScheduleModel]
+    let tomorrowSchedules: [ScheduleModel]
     let currentWeekNumber: Int?
     let dateStart: String?
     let dateEnd: String?
