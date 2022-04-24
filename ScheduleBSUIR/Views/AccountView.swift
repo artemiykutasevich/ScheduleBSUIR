@@ -9,6 +9,7 @@ import SwiftUI
 
 struct AccountView: View {
     @StateObject private var viewModel = AccountViewModel()
+    @State private var sheetActive = false
     
     init() {
         UITableView.appearance().backgroundColor = UIColor(Color("Background"))
@@ -22,48 +23,59 @@ struct AccountView: View {
                         Image(systemName: "person")
                             .font(.largeTitle)
                             .padding()
-                            .foregroundColor(.primary)
-                            .background(Color("Main"), in:
-                                            Circle()
-                            )
+                            .foregroundColor(Color("Background"))
+                            .background(Color("Main"), in: Circle())
                         Text("")
-                            .titleStyle(text: "Group 924404")
+                            .titleStyle(text: "Group \(viewModel.selectedGroup)")
                             .foregroundColor(.white)
                     }
                 }
                 .padding()
-                .graffitiStyle(color: Color("Main"))
+                .graffitiStyleView(color: Color("Main"))
                 
-                ForEach(viewModel.groups) { group in
+                ForEach(viewModel.savedGroups) { group in
                     Button(action: {
-                        // MARK: add logic
+                        viewModel.selectedGroup = group.number
                     }, label: {
                         HStack {
-                            Text("924404")
-                                .foregroundColor(.primary)
-                            Spacer()
-                            // MARK: add logic
-                            if group.number == 3 {
+                            if group.number == viewModel.selectedGroup {
+                                Text("\(group.number.description)")
+                                    .foregroundColor(.primary)
+                                    .fontWeight(.semibold)
+                                Spacer()
                                 Image(systemName: "checkmark")
+                                    .foregroundColor(.primary)
+                            } else {
+                                Text("\(group.number.description)")
+                                    .foregroundColor(.primary)
+                                Spacer()
                             }
                         }
+                        .padding()
+                        .graffitiStyleView(color: Color("Main"))
                     })
-                    .padding()
                 }
                 
                 Button(action: {
-                    // MARK: add logic
+                    sheetActive = true
                 }, label: {
-                    Label("Add new group", systemImage: "plus")
+                    Text("")
+                        .bodyStyle(text: "+ Add new group")
                 })
                 .padding()
-                .graffitiStyle(color: .blue)
+                .graffitiStyleView(color: Color("Main"))
+            }
+            .sheet(isPresented: $sheetActive) {
+                AddNewGroupView()
             }
             .safeAreaInset(edge: .bottom) {
                 Color.clear.frame(height: 70)
             }
             .background(Color("Background").ignoresSafeArea())
             .navigationTitle("Account")
+        }
+        .onAppear() {
+            viewModel.wakeUp()
         }
     }
 }

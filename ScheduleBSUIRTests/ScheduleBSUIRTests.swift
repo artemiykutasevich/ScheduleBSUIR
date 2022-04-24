@@ -21,6 +21,13 @@ class ScheduleBSUIRTests: XCTestCase {
         viewModel = nil
     }
     
+    func testScheduleNotNilForUncreatedGroup() {
+        DispatchQueue.main.async {
+            self.viewModel.makeScheduleFor(group: 000000)
+            XCTAssertNotNil(self.viewModel.schedule, "Schedule is nil")
+        }
+    }
+    
     func testScheduleNotNilForSelectedGroup() {
         DispatchQueue.main.async {
             self.viewModel.makeScheduleFor(group: self.selectedGroup)

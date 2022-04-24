@@ -34,6 +34,8 @@ struct LessonView: View {
             VStack(alignment: .leading, spacing: 0) {
                 Text("")
                     .titleStyle(text: subject)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.3)
                 HStack {
                     Circle()
                         .circleStyle(color: Color(lessonType))
@@ -42,21 +44,29 @@ struct LessonView: View {
                 }
                 Text("")
                     .subBodyStyle(text: cabinet)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.5)
             }
             
             VStack(alignment: .leading, spacing: 0) {
                 Text("")
                     .bodyStyle(text: firstName)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.5)
                 Text("")
                     .subBodyStyle(text: lastName)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.5)
                 Text("")
                     .subBodyStyle(text: middleName)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.5)
             }
             
             Spacer()
         }
         .padding()
-        .graffitiStyle(color: Color(lessonType))
+        .graffitiStyleView(color: Color(lessonType))
     }
 }
 

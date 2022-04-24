@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B83BC3FA2815519800637AB9 /* AddNewGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83BC3F92815519800637AB9 /* AddNewGroupView.swift */; };
+		B83BC3FE281562EF00637AB9 /* AddNewGroupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83BC3FD281562EF00637AB9 /* AddNewGroupViewModel.swift */; };
 		B84B97F727F745F0002720CE /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84B97F627F745F0002720CE /* Lesson.swift */; };
 		B84B97FF27F873CB002720CE /* ScheduleBSUIRTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84B97FE27F873CB002720CE /* ScheduleBSUIRTests.swift */; };
 		B85F5E3727F07009007C7B3A /* ScheduleBSUIRApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85F5E3627F07009007C7B3A /* ScheduleBSUIRApp.swift */; };
@@ -43,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B83BC3F92815519800637AB9 /* AddNewGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewGroupView.swift; sourceTree = "<group>"; };
+		B83BC3FD281562EF00637AB9 /* AddNewGroupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewGroupViewModel.swift; sourceTree = "<group>"; };
 		B84B97F627F745F0002720CE /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
 		B84B97FC27F873CB002720CE /* ScheduleBSUIRTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScheduleBSUIRTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B84B97FE27F873CB002720CE /* ScheduleBSUIRTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleBSUIRTests.swift; sourceTree = "<group>"; };
@@ -153,6 +157,7 @@
 				B85F5E4A27F074CA007C7B3A /* TasksView.swift */,
 				B85F5E4C27F074DC007C7B3A /* ScheduleView.swift */,
 				B85F5E4E27F074ED007C7B3A /* AccountView.swift */,
+				B83BC3F92815519800637AB9 /* AddNewGroupView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -185,6 +190,7 @@
 				B85F5E5927F0827B007C7B3A /* TasksViewModel.swift */,
 				B85F5E5B27F082BA007C7B3A /* ScheduleViewModel.swift */,
 				B85F5E5D27F082E4007C7B3A /* AccountViewModel.swift */,
+				B83BC3FD281562EF00637AB9 /* AddNewGroupViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -327,6 +333,8 @@
 				B8E7430727F1BAC50029A152 /* TaskType.swift in Sources */,
 				B85F5E5A27F0827B007C7B3A /* TasksViewModel.swift in Sources */,
 				B84B97F727F745F0002720CE /* Lesson.swift in Sources */,
+				B83BC3FA2815519800637AB9 /* AddNewGroupView.swift in Sources */,
+				B83BC3FE281562EF00637AB9 /* AddNewGroupViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

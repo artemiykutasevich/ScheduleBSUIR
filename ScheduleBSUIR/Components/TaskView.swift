@@ -31,7 +31,7 @@ struct TaskView: View {
         }
         .frame(width: width)
         .padding()
-        .graffitiStyle(color: Color(taskType.rawValue))
+        .graffitiStyleView(color: Color(taskType.rawValue))
     }
 }
 

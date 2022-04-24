@@ -5,15 +5,15 @@
 //  Created by Artem Kutasevich on 27.03.22.
 //
 
-import Foundation
+import SwiftUI
 
 class ScheduleViewModel: ObservableObject {
-    @Published var date = Date()
+    @AppStorage("selectedGroup") private var selectedGroup = 000000
     @Published var schedule: Lesson?
     
     init() {
         DispatchQueue.main.async {
-            self.makeScheduleFor(group: 924403)
+            self.makeScheduleFor(group: self.selectedGroup)
         }
     }
     

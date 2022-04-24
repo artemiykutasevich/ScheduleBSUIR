@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct GraffitiStyle: ViewModifier {
+struct GraffitiStyleView: ViewModifier {
     var cornerRadius: CGFloat
     var color: Color
     
@@ -28,8 +28,31 @@ struct GraffitiStyle: ViewModifier {
     }
 }
 
+struct GraffitiStyleTextField: ViewModifier {
+    var cornerRadius: CGFloat
+    
+    func body(content: Content) -> some View {
+        content
+            .background(
+                RoundedRectangle(cornerRadius: cornerRadius)
+                    .fill(.ultraThinMaterial)
+            )
+            .overlay(
+                RoundedRectangle(cornerRadius: cornerRadius)
+                    .strokeBorder(lineWidth: 2, antialiased: true)
+                    .foregroundColor(.black)
+            )
+            .padding(.leading)
+            .padding(.trailing)
+    }
+}
+
 extension View {
-    func graffitiStyle(cornerRadius: CGFloat = 20, color: Color) -> some View {
-        self.modifier(GraffitiStyle(cornerRadius: cornerRadius, color: color))
+    func graffitiStyleView(cornerRadius: CGFloat = 20, color: Color) -> some View {
+        self.modifier(GraffitiStyleView(cornerRadius: cornerRadius, color: color))
+    }
+    
+    func graffitiStyleTextField(cornerRadius: CGFloat = 20) -> some View {
+        self.modifier(GraffitiStyleTextField(cornerRadius: cornerRadius))
     }
 }

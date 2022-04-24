@@ -9,8 +9,9 @@ import SwiftUI
 
 struct ScheduleView: View {
     @StateObject private var viewModel = ScheduleViewModel()
-    @State var today = true
+    @State private var today = true
     
+    // MARK: - body
     var body: some View {
         NavigationView {
             ScrollView {
@@ -18,37 +19,40 @@ struct ScheduleView: View {
                 
                 if today && viewModel.getTodaySchedule().isEmpty {
                     Text("")
-                        .subTitleStyle(text: "Сегодня занятий нет, отдохни, дружище")
+                        .subTitleStyle(text: "No classes today, take a rest, buddy")
+                        .multilineTextAlignment(.center)
+                        .padding()
                 }
                 
                 if !today && viewModel.getTomorrowSchedule().isEmpty {
                     Text("")
-                        .subTitleStyle(text: "Завтра занятий нет, можно отдохнуть")
+                        .subTitleStyle(text: "Tomorrow there are no classes, you can relax")
+                        .multilineTextAlignment(.center)
+                        .padding()
                 }
                 
-                if today {
-                    ForEach(today ? viewModel.getTodaySchedule() : viewModel.getTomorrowSchedule()) { lesson in
-                        LessonView(
-                            lessonType: lesson.lessonType ?? "",
-                            lessonFor: lesson.numSubgroup?.description ?? "",
-                            startLessonTime: lesson.startLessonTime ?? "",
-                            endLessonType: lesson.endLessonTime ?? "",
-                            subject: lesson.subject ?? "",
-                            cabinet: lesson.auditory?.first ?? "",
-                            firstName: lesson.employee?.first?.lastName ?? "",
-                            lastName: lesson.employee?.first?.firstName ?? "",
-                            middleName: lesson.employee?.first?.middleName ?? "")
-                    }
+                ForEach(today ? viewModel.getTodaySchedule() : viewModel.getTomorrowSchedule()) { lesson in
+                    LessonView(
+                        lessonType: lesson.lessonType ?? "",
+                        lessonFor: lesson.numSubgroup?.description ?? "",
+                        startLessonTime: lesson.startLessonTime ?? "",
+                        endLessonType: lesson.endLessonTime ?? "",
+                        subject: lesson.subject ?? "",
+                        cabinet: lesson.auditory?.first ?? "",
+                        firstName: lesson.employee?.first?.lastName ?? "",
+                        lastName: lesson.employee?.first?.firstName ?? "",
+                        middleName: lesson.employee?.first?.middleName ?? "")
                 }
             }
             .safeAreaInset(edge: .bottom) {
                 Color.clear.frame(height: 70)
             }
             .background(Color("Background").ignoresSafeArea())
-            .navigationTitle("Schedule \(viewModel.schedule?.studentGroup?.name ?? "00000")")
+            .navigationTitle("Schedule \(viewModel.schedule?.studentGroup?.name ?? "000000")")
         }
     }
     
+    // MARK: - head
     var head: some View {
         HStack {
             Spacer()
@@ -56,18 +60,18 @@ struct ScheduleView: View {
                 today = true
             }) {
                 Text("")
-                    .titleStyle(text: "Сегодня")
+                    .titleStyle(text: "Today")
                     .padding(today ? 16 : 8)
-                    .graffitiStyle(color: today ? .blue : .gray)
+                    .graffitiStyleView(color: today ? Color("Main") : .gray)
             }
             Spacer()
             Button(action: {
                 today = false
             }) {
                 Text("")
-                    .titleStyle(text: "Завтра")
+                    .titleStyle(text: "Tomorrow")
                     .padding(today ? 8 : 16)
-                    .graffitiStyle(color: today ? .gray : .blue)
+                    .graffitiStyleView(color: today ? .gray : Color("Main"))
             }
             Spacer()
         }
