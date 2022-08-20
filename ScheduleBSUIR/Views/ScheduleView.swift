@@ -44,9 +44,6 @@ struct ScheduleView: View {
                         middleName: lesson.employee?.first?.middleName ?? "")
                 }
             }
-            .safeAreaInset(edge: .bottom) {
-                Color.clear.frame(height: 70)
-            }
             .background(Color("Background").ignoresSafeArea())
             .navigationTitle("Schedule \(viewModel.schedule?.studentGroup?.name ?? "000000")")
         }

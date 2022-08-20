@@ -8,35 +8,39 @@
 import SwiftUI
 
 struct TaskView: View {
-    var taskType: TaskType
-    var title: String
-    var date: String
-    var text: String
-    var width: CGFloat
+    let task: TaskModel
+    let width: CGFloat
     
     var body: some View {
         VStack {
             Text("")
-                .titleStyle(text: title)
+                .titleStyle(text: task.title)
             Text("")
-                .subBodyStyle(text: date)
+                .subBodyStyle(text: task.date.description)
             HStack {
                 Circle()
-                    .circleStyle(color: Color(taskType.rawValue))
+                    .circleStyle(color: Color(task.taskType.rawValue))
                 Text("")
-                    .subBodyStyle(text: taskType.rawValue)
+                    .subBodyStyle(text: task.taskType.rawValue)
             }
             Text("")
-                .bodyStyle(text: text)
+                .bodyStyle(text: task.text)
         }
         .frame(width: width)
         .padding()
-        .graffitiStyleView(color: Color(taskType.rawValue))
+        .graffitiStyleView(color: Color(task.taskType.rawValue))
     }
 }
 
 struct Task_Previews: PreviewProvider {
     static var previews: some View {
-        TaskView(taskType: .custom, title: "Title", date: "19.20.2020", text: "text", width: 150)
+        TaskView(
+            task: TaskModel(
+                id: UUID(),
+                taskType: .custom,
+                title: "title",
+                date: Date(),
+                text: "some text"),
+            width: 200)
     }
 }

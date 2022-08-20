@@ -8,21 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
-    @AppStorage("selectedTab") var selectedTab: Tab = .account
-    
     var body: some View {
-        ZStack {
-            Group {
-                switch selectedTab {
-                case .tasks:
-                    TasksView()
-                case .schedule:
-                    ScheduleView()
-                case .account:
-                    AccountView()
+        TabView {
+            TasksView()
+                .tabItem {
+                    Label("Tasks", systemImage: "mic")
                 }
-            }
-            TabBar()
+            ScheduleView()
+                .tabItem {
+                    Label("Schedule", systemImage: "calendar")
+                }
+            AccountView()
+                .tabItem {
+                    Label("Account", systemImage: "person")
+                }
         }
     }
 }

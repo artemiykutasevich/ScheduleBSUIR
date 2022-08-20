@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum TaskType: String {
+enum TaskType: String, CaseIterable {
     case custom = "Личная"
     case university = "Универ"
 }

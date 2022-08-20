@@ -8,5 +8,9 @@
 import Foundation
 
 class TasksViewModel: ObservableObject {
+    @Published var tasks = [TaskModel]()
     
+    init() {
+        
+    }
 }

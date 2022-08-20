@@ -9,20 +9,14 @@ import SwiftUI
 
 struct TasksView: View {
     @StateObject private var viewModel = TasksViewModel()
-    var taskWidth = UIScreen.main.bounds.width / 2 - 60
+    var columns: [GridItem] = Array(repeating: .init(.adaptive(minimum: 150, maximum: .infinity)), count: 2)
     
     var body: some View {
         NavigationView {
             ScrollView {
-                ForEach(0..<5) { _ in
-                    HStack(spacing: 0) {
-                        TaskView(taskType: .custom, title: "oleg", date: "dkdkkd", text: "ffkfk", width: taskWidth)
-                        TaskView(taskType: .university, title: "good play", date: "sksks", text: "djdjdj", width: taskWidth)
-                    }
+                LazyVGrid(columns: columns) {
+                    Text("Some buddy like you")
                 }
-            }
-            .safeAreaInset(edge: .bottom) {
-                Color.clear.frame(height: 70)
             }
             .background(Color("Background").ignoresSafeArea())
             .navigationTitle("Tasks")

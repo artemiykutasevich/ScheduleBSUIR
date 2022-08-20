@@ -30,7 +30,6 @@ struct AddNewGroupView: View {
                 
                 Spacer()
             }
-            .padding(.top)
             .background(Color("Background").ignoresSafeArea())
             .navigationTitle("Add new group")
         }

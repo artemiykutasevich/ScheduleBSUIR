@@ -9,11 +9,6 @@ import SwiftUI
 
 struct AccountView: View {
     @StateObject private var viewModel = AccountViewModel()
-    @State private var sheetActive = false
-    
-    init() {
-        UITableView.appearance().backgroundColor = UIColor(Color("Background"))
-    }
     
     var body: some View {
         NavigationView {
@@ -30,52 +25,8 @@ struct AccountView: View {
                             .foregroundColor(.white)
                     }
                 }
-                .padding()
-                .graffitiStyleView(color: Color("Main"))
-                
-                ForEach(viewModel.savedGroups) { group in
-                    Button(action: {
-                        viewModel.selectedGroup = group.number
-                    }, label: {
-                        HStack {
-                            if group.number == viewModel.selectedGroup {
-                                Text("\(group.number.description)")
-                                    .foregroundColor(.primary)
-                                    .fontWeight(.semibold)
-                                Spacer()
-                                Image(systemName: "checkmark")
-                                    .foregroundColor(.primary)
-                            } else {
-                                Text("\(group.number.description)")
-                                    .foregroundColor(.primary)
-                                Spacer()
-                            }
-                        }
-                        .padding()
-                        .graffitiStyleView(color: Color("Main"))
-                    })
-                }
-                
-                Button(action: {
-                    sheetActive = true
-                }, label: {
-                    Text("")
-                        .bodyStyle(text: "+ Add new group")
-                })
-                .padding()
-                .graffitiStyleView(color: Color("Main"))
             }
-            .sheet(isPresented: $sheetActive) {
-                AddNewGroupView()
-            }
-            .safeAreaInset(edge: .bottom) {
-                Color.clear.frame(height: 70)
-            }
-            .background(Color("Background").ignoresSafeArea())
             .navigationTitle("Account")
-        }
-        .onAppear() {
-            viewModel.wakeUp()
         }
     }
 }
